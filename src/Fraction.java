@@ -90,7 +90,7 @@ public class Fraction
     }
 
 
-    public Fraction decToFrac(double dec) {
+    public static Fraction decToFrac(double dec) {
         int numMultiplied = 0;
 
         while (dec != (int) dec) {
@@ -99,17 +99,14 @@ public class Fraction
         }
 
         int num = (int) dec;
-        int denom = (int) Math.pow(10, numMultiplied)
+        int denom = (int) Math.pow(10, numMultiplied);
 
         int gcf = getGCF(num, denom);
 
-        dec = dec / gcf;
-
-
-
+        return new Fraction(num/gcf, denom/gcf);
     }
 
-    private int getGCF(int n1,int n2) {
+    private static int getGCF(int n1,int n2) {
         int greatest = n1;
         int gcf = 1;
 
@@ -126,7 +123,7 @@ public class Fraction
         return gcf;
     }
 
-    private boolean isDivInt(int a, int b) {
+    private static boolean isDivInt(int a, int b) {
         return (a / b == a / (double) b);
     }
 }

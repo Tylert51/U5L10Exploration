@@ -51,7 +51,10 @@ public class FractionRunner {
 
         System.out.println(srslyWTFdoesThisDo);
 
+        System.out.println("\n\n");
 
+        System.out.println(Fraction.decToFrac(0.125));
 
+        System.out.println(frac1.largerFraction(frac2).multiplyWithFraction(frac5.largerFraction(frac3)));
     }
 }
